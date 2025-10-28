@@ -1,4 +1,4 @@
-# ![Routesit Banner](assets/banner.png)
+# ![Routesit Banner](routesitbanner/Routesit.png)
 
 
 # Routesit — Advanced Road Safety Decision System
