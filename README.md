@@ -1,4 +1,5 @@
-# ![Routesit Banner]([https://link.url.image.png](https://media.discordapp.net/attachments/1420092566715633784/1432759384923963415/568631390_1825759678079625_4856681336625592065_n.png?ex=690238a8&is=6900e728&hm=2efd4e89354fbe90c4e45c347bf0aa07b68650cd09560333016119f088e27c6a&=&format=webp&quality=lossless&width=1280&height=800))
+# ![Routesit Banner](assets/banner.png)
+
 
 # Routesit — Advanced Road Safety Decision System
 
