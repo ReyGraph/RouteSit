@@ -1,0 +1,162 @@
+# Language Configuration for Routesit AI
+# Supports 5 major Indian languages + English
+
+supported_languages:
+  en: # English
+    name: "English"
+    script: "latin"
+    coverage: "100% population"
+    model_path: ""
+    is_rtl: false
+    cultural_context:
+      region: "Global"
+      traffic_patterns: "Mixed international standards"
+      common_interventions: ["traffic_lights", "speed_cameras"]
+      cultural_notes: "International best practices"
+
+  hi: # Hindi
+    name: "Hindi"
+    script: "devanagari"
+    coverage: "40% population"
+    model_path: "ai4bharat/indictrans2-hi-en"
+    is_rtl: false
+    cultural_context:
+      region: "North India"
+      traffic_patterns: "Mixed traffic, high density"
+      common_interventions: ["speed_breaker", "traffic_police"]
+      cultural_notes: "Respect for authority, community-based solutions"
+    domain_terminology:
+      zebra_crossing: "ज़ेबरा क्रॉसिंग"
+      speed_limit: "गति सीमा"
+      traffic_sign: "यातायात संकेत"
+      accident: "दुर्घटना"
+      road_safety: "सड़क सुरक्षा"
+      pedestrian: "पैदल यात्री"
+      vehicle: "वाहन"
+      intersection: "चौराहा"
+      highway: "राजमार्ग"
+      urban_road: "शहरी सड़क"
+
+  ta: # Tamil
+    name: "Tamil"
+    script: "tamil"
+    coverage: "6% population"
+    model_path: "ai4bharat/indictrans2-ta-en"
+    is_rtl: false
+    cultural_context:
+      region: "Tamil Nadu"
+      traffic_patterns: "Urban congestion, two-wheeler heavy"
+      common_interventions: ["speed_hump", "school_zone_sign"]
+      cultural_notes: "Education-focused, systematic approach"
+    domain_terminology:
+      zebra_crossing: "வரிக்குதிரை கடப்பு"
+      speed_limit: "வேக வரம்பு"
+      traffic_sign: "போக்குவரத்து அடையாளம்"
+      accident: "விபத்து"
+      road_safety: "சாலை பாதுகாப்பு"
+      pedestrian: "பாதசாரி"
+      vehicle: "வாகனம்"
+      intersection: "சந்திப்பு"
+      highway: "தேசிய நெடுஞ்சாலை"
+      urban_road: "நகர சாலை"
+
+  te: # Telugu
+    name: "Telugu"
+    script: "telugu"
+    coverage: "7% population"
+    model_path: "ai4bharat/indictrans2-te-en"
+    is_rtl: false
+    cultural_context:
+      region: "Telangana/Andhra Pradesh"
+      traffic_patterns: "Rural-urban mix, agricultural vehicles"
+      common_interventions: ["warning_sign", "barrier"]
+      cultural_notes: "Agricultural context, seasonal patterns"
+    domain_terminology:
+      zebra_crossing: "జీబ్రా క్రాసింగ్"
+      speed_limit: "వేగ పరిమితి"
+      traffic_sign: "ట్రాఫిక్ సైన్"
+      accident: "ప్రమాదం"
+      road_safety: "రోడ్ సేఫ్టీ"
+      pedestrian: "పాదచారి"
+      vehicle: "వాహనం"
+      intersection: "క్రాస్ రోడ్స్"
+      highway: "హైవే"
+      urban_road: "అర్బన్ రోడ్"
+
+  bn: # Bengali
+    name: "Bengali"
+    script: "bengali"
+    coverage: "8% population"
+    model_path: "ai4bharat/indictrans2-bn-en"
+    is_rtl: false
+    cultural_context:
+      region: "West Bengal"
+      traffic_patterns: "Dense urban, tram integration"
+      common_interventions: ["pedestrian_bridge", "traffic_light"]
+      cultural_notes: "Urban planning heritage, public transport"
+    domain_terminology:
+      zebra_crossing: "জেব্রা ক্রসিং"
+      speed_limit: "গতি সীমা"
+      traffic_sign: "ট্রাফিক সাইন"
+      accident: "দুর্ঘটনা"
+      road_safety: "রাস্তার নিরাপত্তা"
+      pedestrian: "পথচারী"
+      vehicle: "যানবাহন"
+      intersection: "চৌমাথা"
+      highway: "রাজপথ"
+      urban_road: "শহুরে রাস্তা"
+
+  mr: # Marathi
+    name: "Marathi"
+    script: "devanagari"
+    coverage: "7% population"
+    model_path: "ai4bharat/indictrans2-mr-en"
+    is_rtl: false
+    cultural_context:
+      region: "Maharashtra"
+      traffic_patterns: "Metropolitan complexity, industrial traffic"
+      common_interventions: ["flyover", "metro_integration"]
+      cultural_notes: "Industrial development, infrastructure focus"
+    domain_terminology:
+      zebra_crossing: "झेब्रा क्रॉसिंग"
+      speed_limit: "वेग मर्यादा"
+      traffic_sign: "वाहतूक चिन्ह"
+      accident: "अपघात"
+      road_safety: "रस्ता सुरक्षा"
+      pedestrian: "पादचारी"
+      vehicle: "वाहन"
+      intersection: "चौक"
+      highway: "राजमार्ग"
+      urban_road: "शहरी रस्ता"
+
+# Translation settings
+translation:
+  default_source: "en"
+  default_target: "hi"
+  confidence_threshold: 0.7
+  preserve_cultural_context: true
+  use_domain_terminology: true
+
+# Language detection settings
+detection:
+  min_text_length: 3
+  confidence_threshold: 0.5
+  fallback_language: "en"
+  supported_scripts: ["latin", "devanagari", "tamil", "telugu", "bengali"]
+
+# Prompt templates
+prompt_templates:
+  safety_analysis:
+    en: "You are Routesit AI, an expert road safety analyst. Analyze the following scenario and provide detailed recommendations for interventions."
+    hi: "आप Routesit AI हैं, एक विशेषज्ञ सड़क सुरक्षा विश्लेषक। निम्नलिखित परिदृश्य का विश्लेषण करें और हस्तक्षेप के लिए विस्तृत सिफारिशें प्रदान करें।"
+    ta: "நீங்கள் Routesit AI, ஒரு நிபுணர் சாலை பாதுகாப்பு பகுப்பாய்வாளர். பின்வரும் காட்சியை பகுப்பாய்வு செய்து தலையீடுகளுக்கான விரிவான பரிந்துரைகளை வழங்கவும்।"
+    te: "మీరు Routesit AI, ఒక నిపుణుడు రోడ్ సేఫ్టీ విశ్లేషకుడు. క్రింది దృశ్యాన్ని విశ్లేషించి, జోక్యాల కోసం వివరణాత్మక సిఫార్సులను అందించండి।"
+    bn: "আপনি Routesit AI, একজন বিশেষজ্ঞ রাস্তার নিরাপত্তা বিশ্লেষক। নিম্নলিখিত পরিস্থিতি বিশ্লেষণ করুন এবং হস্তক্ষেপের জন্য বিস্তারিত সুপারিশ প্রদান করুন।"
+    mr: "तुम्ही Routesit AI आहात, एक तज्ञ रस्ता सुरक्षा विश्लेषक. खालील परिस्थितीचे विश्लेषण करा आणि हस्तक्षेपासाठी तपशीलवार शिफारसी द्या।"
+
+# Performance settings
+performance:
+  cache_translations: true
+  max_cache_size: 1000
+  translation_timeout: 30
+  batch_size: 10

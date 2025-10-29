@@ -1,0 +1,11 @@
+device: auto
+max_tokens: 2048
+model_name: Llama-3-8B-Instruct
+model_path: models/llama-3-8b-instruct-quantized
+quantization: 4-bit
+system_capabilities:
+  cpu_cores: 12
+  gpu_memory_gb: 0
+  has_gpu: false
+temperature: 0.7
+top_p: 0.9

@@ -1,0 +1,28 @@
+# Database Configuration
+database:
+  chromadb:
+    persist_directory: "./data/embeddings/chromadb"
+    collection_name: "interventions"
+    
+  interventions:
+    source_file: "./data/interventions/interventions.json"
+    backup_file: "./data/interventions/interventions_backup.json"
+    
+# Application Configuration
+app:
+  title: "Routesit AI - Road Safety Intervention System"
+  debug: true
+  port: 8501
+  host: "localhost"
+  
+# Export Configuration
+export:
+  pdf:
+    output_dir: "./data/exports"
+    template_file: "./config/pdf_template.html"
+    
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "./logs/routesit.log"
