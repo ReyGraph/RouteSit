@@ -43,8 +43,8 @@ Routesit is designed to be **offline, lightweight, and demonstration-ready**, hi
 
 - **Language:** Python  
 - **Embeddings & Retrieval:** sentence-transformers, FAISS/Chroma  
-- **LLM Reasoning:** LLaMA 2 7B (local, quantized)  
-- **Computer Vision (optional):** YOLOv8 for sign and road feature detection  
+- **LLM Reasoning:** LLaMA 3 8B Quantized 4bit - 10 bit  (local, quantized)  
+- **Computer Vision (optionally under development):** YOLOv8 for sign and road feature detection  
 - **Dependency/Conflict Graph:** NetworkX  
 - **Visualization:** matplotlib / plotly  
 - **Frontend Demo:** Streamlit / Flask
